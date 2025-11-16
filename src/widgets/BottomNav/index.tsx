@@ -1,36 +1,29 @@
 import { TabBar } from "antd-mobile";
 import { Home, User } from "lucide-react";
-import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const BottomNav = () => {
-    const [active, setActive] = useState("home");
+    const navigate = useNavigate();
+    const { pathname } = useLocation();
 
     return (
         <div style={{ position: "fixed", bottom: 0, left: 0, right: 0 }}>
-            <TabBar activeKey={active} onChange={setActive}>
-
+            <TabBar
+                activeKey={pathname}
+                onChange={(val) => navigate(val)}
+            >
                 <TabBar.Item
-                    key="home"
+                    key="/home"
                     title="Home"
                     icon={<Home size={22} />}
                 />
 
                 <TabBar.Item
-                    key="profile"
+                    key="/user"
                     title="Profile"
                     icon={<User size={22} />}
                 />
-
-                {/* Если понадобятся настройки:
-        <TabBar.Item
-          key="settings"
-          title="Settings"
-          icon={<Settings size={22} />}
-        />
-        */}
-
             </TabBar>
         </div>
     );
 };
-
