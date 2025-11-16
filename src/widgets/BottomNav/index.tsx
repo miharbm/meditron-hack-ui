@@ -14,13 +14,13 @@ export const BottomNav = () => {
             >
                 <TabBar.Item
                     key="/home"
-                    title="Home"
+                    title="Главная"
                     icon={<Home size={22} />}
                 />
 
                 <TabBar.Item
                     key="/user"
-                    title="Profile"
+                    title="Профиль"
                     icon={<User size={22} />}
                 />
             </TabBar>
