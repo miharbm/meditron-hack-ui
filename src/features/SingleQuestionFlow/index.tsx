@@ -50,7 +50,7 @@ const SingleQuestionFlow = ({ questions, onFinish, immediatelyNext }: Props) => 
     const isAnswered = !!answers[current.id];
 
     return (
-        <Card style={{ margin: 16, padding: 20 }}>
+        <Card style={{ padding: 20 }}>
             <div className={styles.counter}>
                 {index + 1}/{questions.length}
             </div>

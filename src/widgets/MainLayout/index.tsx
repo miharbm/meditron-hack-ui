@@ -1,9 +1,10 @@
 import {Outlet} from "react-router-dom";
+import {BottomNav} from "../BottomNav";
 
 
 export const MainLayout = () => {
     return (
-        <div className="flex flex-col h-screen bg-white">
+        <div className="flex flex-col bg-white" style={{"minHeight": "100svh"}}>
 
             {/* Верхняя панель */}
             <header className="h-14 flex items-center px-4 border-b">
@@ -16,11 +17,12 @@ export const MainLayout = () => {
             </main>
 
             {/* Нижняя навигация */}
-            <nav className="h-14 border-t flex justify-around items-center">
-                <button>Home</button>
-                <button>Profile</button>
-                <button>Settings</button>
-            </nav>
+            {/*<nav className="h-14 border-t flex justify-around items-center">*/}
+            {/*    <button>Home</button>*/}
+            {/*    <button>Profile</button>*/}
+            {/*    /!*<button>Settings</button>*!/*/}
+            {/*</nav>*/}
+            <BottomNav/>
         </div>
     );
 }
