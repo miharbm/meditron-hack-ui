@@ -4,6 +4,8 @@ import {createBrowserRouter, Navigate} from 'react-router-dom';
 import {PrivateRoute, PublicRoute} from "./routes.tsx";
 import {MainLayout} from "../widgets/MainLayout";
 import {LoginPage} from "../pages/LoginPage.tsx";
+import {FirstQuizPage} from "../pages/FirstQuizPage.tsx";
+import {MainPage} from "../pages/MainPage.tsx";
 
 
 export const appRouter = createBrowserRouter([
@@ -23,7 +25,9 @@ export const appRouter = createBrowserRouter([
                 path: '/',
                 element: <MainLayout/>,
                 children: [
-                    {index: true, element: <Navigate to="/" replace/>},
+                    {index: true, element: <Navigate to="/home" replace/>},
+                    {path: "first-quiz", element: <FirstQuizPage/>},
+                    {path: "home", element: <MainPage/>},
                 ]
             },
         ],

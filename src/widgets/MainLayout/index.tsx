@@ -7,7 +7,7 @@ export const MainLayout = () => {
 
             {/* Верхняя панель */}
             <header className="h-14 flex items-center px-4 border-b">
-                <h1 className="text-lg font-medium">My App</h1>
+                <h1 className="text-lg font-medium">НАСТРОениум</h1>
             </header>
 
             {/* Контент */}
