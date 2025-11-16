@@ -6,6 +6,7 @@ export const FirstQuizPage = () => {
         <div>
             <SingleQuestionFlow
                 questions={firstQuizQuestions}
+                immediatelyNext={true}
                 onFinish={(answers) => {
                     console.log("все ответы:", answers)
                 }}

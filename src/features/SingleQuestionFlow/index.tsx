@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Radio, Space, Button, Card } from "antd-mobile";
+import styles from "./Styles.module.scss"
+import type {RadioValue} from "antd-mobile/es/components/radio";
 
 
 export interface Question {
@@ -11,9 +13,10 @@ export interface Question {
 interface Props {
     questions: Question[];
     onFinish?: (answers: Record<string, string>) => void;
+    immediatelyNext?: boolean;
 }
 
-const SingleQuestionFlow = ({ questions, onFinish }: Props) => {
+const SingleQuestionFlow = ({ questions, onFinish, immediatelyNext }: Props) => {
     const [index, setIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>({});
 
@@ -36,24 +39,32 @@ const SingleQuestionFlow = ({ questions, onFinish }: Props) => {
         if (index > 0) setIndex(index - 1);
     };
 
+    const onSelectCurrentAnswer = (val: RadioValue) => {
+        handleAnswer(val as string)
+
+        if (immediatelyNext) {
+            setTimeout(() => next(), 300)
+        }
+    }
+
     const isAnswered = !!answers[current.id];
 
     return (
         <Card style={{ margin: 16, padding: 20 }}>
-            <div>
-                {index}/{questions.length}
+            <div className={styles.counter}>
+                {index + 1}/{questions.length}
             </div>
             <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 20 }}>
                 {current.question}
             </div>
 
             <Radio.Group
-                value={answers[current.id]}
-                onChange={(val) => handleAnswer(val as string)}
+                value={answers[current.id] ?? null}
+                onChange={onSelectCurrentAnswer}
             >
-                <Space direction="vertical">
+                <Space direction="vertical" block>
                     {current.options.map((opt) => (
-                        <Radio key={opt} value={opt}>
+                        <Radio key={opt} value={opt} block>
                             {opt}
                         </Radio>
                     ))}
