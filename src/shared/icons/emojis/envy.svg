@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" aria-label="зависть">
+    <circle cx="64" cy="64" r="60" fill="#D8F3D8" stroke="#8EBF8E" stroke-width="3"/>
+    <!-- прищуренные глаза -->
+    <path d="M36 60 Q46 54 56 60" stroke="#1b3b1b" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M72 60 Q82 54 92 60" stroke="#1b3b1b" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- рот с лёгкой усмешкой -->
+    <path d="M44 86 Q64 78 84 86" stroke="#1b3b1b" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- "взгляд в сторону" (зеленая искра) -->
+    <circle cx="54" cy="60" r="3" fill="#1b3b1b"/>
+    <circle cx="78" cy="60" r="3" fill="#2b5a2b"/>
+    <!-- маленький лист рядом (символ зависти) -->
+    <path d="M92 40 C86 36, 84 46, 92 48 C96 44, 96 42, 92 40 Z" fill="#77B96B" opacity="0.95"/>
+</svg>

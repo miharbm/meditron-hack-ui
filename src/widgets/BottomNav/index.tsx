@@ -1,5 +1,5 @@
 import { TabBar } from "antd-mobile";
-import { Home, User } from "lucide-react";
+import {HeartPlus, Home, User} from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export const BottomNav = () => {
@@ -16,6 +16,13 @@ export const BottomNav = () => {
                     key="/home"
                     title="Главная"
                     icon={<Home size={22} />}
+                />
+
+                <TabBar.Item
+                    key="/quiz"
+                    title="Опрос"
+
+                    icon={<HeartPlus size={22}/>}
                 />
 
                 <TabBar.Item

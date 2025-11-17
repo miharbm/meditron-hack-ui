@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" aria-label="гнев">
+    <circle cx="64" cy="64" r="60" fill="#FFB3A7" stroke="#D1695A" stroke-width="3"/>
+    <!-- глаза -->
+    <rect x="36" y="50" width="16" height="12" rx="3" fill="#2b1b16"/>
+    <rect x="76" y="50" width="16" height="12" rx="3" fill="#2b1b16"/>
+    <!-- злющие брови -->
+    <path d="M30 44 Q44 28 58 44" stroke="#2b1b16" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M70 44 Q84 28 98 44" stroke="#2b1b16" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- рот -->
+    <path d="M44 92 Q64 72 84 92" stroke="#2b1b16" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- пар/искра гнева -->
+    <g opacity="0.9">
+        <path d="M20 30 C28 20, 36 20, 44 30" stroke="#FFD166" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M104 30 C112 20, 120 20, 128 30" stroke="#FFD166" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+</svg>

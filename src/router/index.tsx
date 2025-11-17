@@ -7,6 +7,7 @@ import {LoginPage} from "../pages/LoginPage.tsx";
 import {FirstQuizPage} from "../pages/FirstQuizPage.tsx";
 import {MainPage} from "../pages/MainPage.tsx";
 import {UserPage} from "../pages/UserPage.tsx";
+import {QuizPage} from "../pages/QuizPage.tsx";
 
 
 export const appRouter = createBrowserRouter([
@@ -30,6 +31,7 @@ export const appRouter = createBrowserRouter([
                     {path: "first-quiz", element: <FirstQuizPage/>},
                     {path: "home", element: <MainPage/>},
                     {path: "user", element: <UserPage/>},
+                    {path: "quiz", element: <QuizPage/>},
                 ]
             },
         ],

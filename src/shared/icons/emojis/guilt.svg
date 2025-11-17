@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" aria-label="вина">
+    <circle cx="64" cy="64" r="60" fill="#F4D6D6" stroke="#D49B9B" stroke-width="3"/>
+    <!-- глаза опущены -->
+    <ellipse cx="46" cy="64" rx="6" ry="4" fill="#3a2f2f"/>
+    <ellipse cx="82" cy="64" rx="6" ry="4" fill="#3a2f2f"/>
+    <!-- покраснение щёк -->
+    <ellipse cx="46" cy="74" rx="10" ry="6" fill="#F6B2B2" opacity="0.9"/>
+    <ellipse cx="82" cy="74" rx="10" ry="6" fill="#F6B2B2" opacity="0.9"/>
+    <!-- сдержанная улыбка -->
+    <path d="M48 88 Q64 96 80 88" stroke="#3a2f2f" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- опущенная голова (тень) -->
+    <path d="M20 30 Q64 20 108 30" stroke="#D49B9B" stroke-width="2" fill="none" opacity="0.5"/>
+</svg>

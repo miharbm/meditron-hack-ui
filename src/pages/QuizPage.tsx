@@ -1,6 +1,10 @@
+import {EmotionSelector} from "../features/EmotionSelector";
+
 export const QuizPage = () => {
 
     return (
-        <div></div>
+        <div>
+            <EmotionSelector/>
+        </div>
     )
 }

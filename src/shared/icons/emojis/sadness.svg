@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" aria-label="печаль">
+  <circle cx="64" cy="64" r="60" fill="#A8C0D8" stroke="#6B8BA8" stroke-width="3"/>
+  <!-- глаза -->
+  <ellipse cx="46" cy="56" rx="6" ry="8" fill="#17364a" opacity="0.95"/>
+  <ellipse cx="82" cy="56" rx="6" ry="8" fill="#17364a" opacity="0.95"/>
+  <!-- брови печальные -->
+  <path d="M36 46 Q46 40 56 46" stroke="#17364a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M72 46 Q82 40 92 46" stroke="#17364a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <!-- рот грустный -->
+  <path d="M46 88 Q64 74 82 88" stroke="#17364a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- слеза -->
+  <path d="M82 64 C86 72, 84 80, 78 86 C76 74, 80 68, 82 64 Z" fill="#5EB1E6" opacity="0.9"/>
+</svg>
