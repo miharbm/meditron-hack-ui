@@ -2,13 +2,15 @@ import { Navigate, Outlet } from 'react-router-dom';
 import {useSelector} from "react-redux";
 import {selectIsLoggedIn} from "../reducers/authSlice.ts";
 
+const enabledAuth = import.meta.env.VITE_ENABLED_AUTH === "true"
+
 /**
  * PrivateRoute - Компонент-обертка для защищенных маршрутов.
  * Если пользователь не аутентифицирован, перенаправляет на страницу логина.
  */
 export const PrivateRoute = () => {
-    // const isAuthenticated = useSelector(selectIsLoggedIn);
-    const isAuthenticated = true;
+    const isAuthenticatedStore = useSelector(selectIsLoggedIn);
+    const isAuthenticated = isAuthenticatedStore || !enabledAuth;
     return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
 };
 

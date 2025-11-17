@@ -1,39 +1,28 @@
-import { useState } from "react";
 import { Form, Input, Button, Toast } from "antd-mobile";
+import {useLoginMutation} from "../../shared/api/authApi.ts";
+import {useNavigate} from "react-router-dom";
 
 export default function LoginForm() {
-    const [loading, setLoading] = useState(false);
+    const [login, { isLoading: loading }] = useLoginMutation();
+    const navigate = useNavigate();
 
     const onFinish = async (values: { email: string; password: string }) => {
-        setLoading(true);
         try {
-            console.log("email:", values.email);
-            console.log("password:", values.password);
-
-            Toast.show({
-                icon: "success",
-                content: "Вход выполнен",
-            });
-        } catch (e) {
-            console.error(e)
-            Toast.show({
-                icon: "fail",
-                content: "Ошибка входа",
-            });
+            await login(values).unwrap();
+            Toast.show({ icon: 'success', content: 'Успешный вход' });
+            navigate("/");
+        } catch (e: any) {
+            Toast.show({ icon: 'fail', content: 'Ошибка входа' });
         }
-        setLoading(false);
     };
 
     return (
         <div
             style={{
-                padding: "24px",
                 maxWidth: 420,
-                margin: "0 auto",
+                margin: "40px auto 0",
             }}
         >
-            <h2 style={{ textAlign: "center", marginBottom: "24px" }}>Вход</h2>
-
             <Form
                 layout="vertical"
                 onFinish={onFinish}
@@ -65,6 +54,15 @@ export default function LoginForm() {
                     <Input type="password" placeholder="••••••••" />
                 </Form.Item>
             </Form>
+
+            <Button
+                block
+                fill="outline"
+                style={{ marginTop: 16 }}
+                onClick={() => navigate("/register")}
+            >
+                Нет аккаунта? Регистрация
+            </Button>
         </div>
     );
 }

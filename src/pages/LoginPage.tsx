@@ -1,9 +1,10 @@
 import LoginForm from "../features/LoginForm/LoginForm.tsx";
+import {PageLayout} from "../widgets/PageLayout";
 
 export const LoginPage = () => {
     return (
-        <div className={"flex justify-center w-full"}>
+        <PageLayout title={"Вход"}>
             <LoginForm/>
-        </div>
+        </PageLayout>
     )
 }

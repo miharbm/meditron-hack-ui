@@ -13,6 +13,7 @@ const loadAuthFromStorage = (): AuthState => {
     try {
         const data = localStorage.getItem(LOCAL_STORAGE_ITEM);
         if (data) {
+            console.log(data)
             return JSON.parse(data);
         }
     } catch (e) {
