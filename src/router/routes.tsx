@@ -13,6 +13,7 @@ export const PrivateRoute = () => {
     if (!enabledAuth) {
         return <Outlet />
     }
+    console.log("isAuthenticatedStore", isAuthenticatedStore)
     return isAuthenticatedStore ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
