@@ -22,5 +22,5 @@ export const PrivateRoute = () => {
  */
 export const PublicRoute = () => {
     const isAuthenticated = useSelector(selectIsLoggedIn);
-    return isAuthenticated ? <Navigate to="/" replace /> : <Outlet />;
+    return isAuthenticated ? <Navigate to="/login" replace /> : <Outlet />;
 };
