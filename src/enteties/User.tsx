@@ -3,5 +3,7 @@ export type User = {
     "password": string,
     "first_name": string,
     "second_name": string,
-    "description": string
+    "description": string,
+    "id": string,
+    "test_id": string,
 }

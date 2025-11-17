@@ -28,7 +28,7 @@ export const authApi = createApi({
                             "first_name": " ",
                             "second_name": " ",
                             "description": " "} }));
-                } catch {}
+                } catch { /* empty */ }
             },
         }),
 
